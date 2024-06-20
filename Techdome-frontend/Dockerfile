@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package.json package-lock.json .
 RUN npm ci
 COPY . .
+RUN npx update-browserslist-db@latest
 RUN npm run build
 
 FROM nginx

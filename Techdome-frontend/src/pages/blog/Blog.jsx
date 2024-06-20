@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './blog.scss';
 import NavBar from '../../components/navbar/NavBar';
-import img from '../../assests/img1.png';
 import BlogCard from '../../components/blogCard/BlogCard';
 
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import { useDispatch, useSelector } from 'react-redux';
 import { ThreeCircles } from 'react-loader-spinner';
-import { getBlog } from '../../api';
+import { getBlog } from '../../apiConfig/api'; // Corrected import path
 
 const Blog = () => {
   const [isLoading, setIsLoading] = useState(true);
